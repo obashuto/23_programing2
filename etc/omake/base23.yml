@@ -1,0 +1,20 @@
+# 環境構築 mamba env create --name base23 --file base23.yml
+# 更新    mamba env update --name base23 --file base23.yml
+
+name: base23
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.10 # Python3.10
+  - streamlit>=1.16 # 可視化用WEBアプリ簡易作成ライブラリ
+  - pandas # データ分析用ライブラリ
+  - matplotlib # データ分析用可視化ライブラリ
+  - pillow # 画像ライブラリ
+  - jupyter # jupyter-notebook (割とまだ良くつこてる)
+  - jupyterlab # jupyterlab (Notebook開発環境)
+  - jupyter-book # jupyterベースのドキュメント作成ツール
+  - pip
+  - pip:
+    - japanize-matplotlib # データ分析用可視化ライブラリの日本語化ツール
+    - neologdn # 自然言語処理正規化ライブラリ
